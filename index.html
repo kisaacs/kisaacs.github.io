@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="ki.css" media="screen" />
+<link rel="shortcut icon" href="favicon.ico" />
+<head>
+<title>Katherine E. Isaacs</title>
+</head>
+<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+<body>
+<!--
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+-->
+
+<div id="leftnav" class="leftnav">
+
+<div class="rightdiv">
+<!-- Navigation -->
+<h3>Katherine E. Isaacs</h3>
+<ul class="navbar">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="publications.html">Publications</a></li>
+  <li><a href="STAR/">PerfVis Survey</a></li>
+  <li><a href="cv.pdf">CV</a></li>
+</ul>
+
+<!-- Contact -->
+
+<h3>Contact</h3>
+<ul class="contact">
+<li>SCI email: kisaacs</li>
+<li>ACM email: kisaacs</li>
+</ul>
+
+<!-- External Links -->
+<h3>External Links</h3>
+<ul class="external">
+  <li><a href="https://scholar.google.com/citations?user=sYt1rjsAAAAJ">Google Scholar</a></li>
+</ul>
+
+<h3>Project Websites</h3>
+<ul class="external">
+  <li><a href="http://hdc-arizona.github.io/projects/dependencies">NSF III-1656958: Dependency Visualization</a></li>
+  <li><a href="projects/gvss/">NSF IIS-1844573: Systems Graphs Visualization</a></li>
+</ul>
+
+<h3>Project Code</h3>
+<ul class="external">
+  <li><a href="http://github.com/hdc-arizona/roundtrip">Roundtrip</a></li>
+  <li><a href="http://github.com/devkotasabin/CFGConf">CFGConf</a></li>
+  <li><a href="http://github.com/hdc-arizona/traveler">Traveler</a></li>
+  <li><a href="http://github.com/hdc-arizona/cfgexplorer">CFGExplorer</a></li>
+  <li><a href="http://github.com/LLNL/ravel">Ravel</a></li>
+  <li><a href="http://github.com/kisaacs/graphterm">graphterm</a></li>
+  <li><a href="http://github.com/LLNL/boxfish">Boxfish</a></li>
+</ul>
+</div>
+</div>
+
+<div class="pubs">
+
+<h3>About</h3>
+
+<p>I am an associate professor at the University of Utah in the School of Computing and <a href="https://www.sci.utah.edu/">SCI Institute</a>. I was previously an
+assistant professor at the University of Arizona and a member of the <a
+href="https://hdc.cs.arizona.edu">Humans, Data, and Computers Lab</a> (HDC).
+    My interests are at the intersection of data visualization and computing
+systems. I develop new methods of representing complex computing processes for
+exploration and analysis of their behavior, with applications to high
+performance computing, distributed computing, data science, program analysis,
+    and optimization. I maintain a survey of such visualizations <a
+href="STAR">here</a>. I was awarded an NSF CAREER grant (<a
+    href="http://hdc.cs.arizona.edu/people/kisaacs/projects/gvss/">NSF
+    1844573</a>) in 2019 and a DOE Early Career Research Program grant in
+    2021.</p> 
+
+<h3>Projects & Themes</h3>
+
+<div class="project">
+<h4>Improving Node-Link Diagrams for Graph Visualizations in Computing Systems </h4>
+ <div class="project-images">
+ <a href="images/cfgconf.png"><img src="images/cfgconf-thumbnail.png" height=210 
+    alt="Image of a graph drawing produced by CFGConf. Loops are drawn with a canonical layout and highlighted with an orange background. The graph is filtered to show the sub-graph of interest, with nodes just outside the filter shown as small ellipses. Uninteresting functions are collapsed into a single node drawn with a dotted border." ></a>
+ </div>
+
+ <div class="project-text">
+
+<p>Graphs are prevalent in computing systems. Control flow graphs describe
+paths through programs. Call graphs describe relations among functions. Task
+graphs describe ordering of work units. Dependency graphs describe
+relationships among libraries. Thus, people working in computing often have
+need to examine these graphs. However, general graph drawing approaches often
+cannot scale to the needs of these workers or when they do, provide a drawing
+that is difficult to interpret. We are developing approaches that identify and
+incorporate drawing conventions and layout algorithms to address these
+challenges. </p>
+
+<p>This work has been supported by the National Science Foundation
+through the <a
+href="https://hdc-arizona.github.io/projects/dependencies/">Dependencies
+Visualization</a> project (Grant No. <a
+    href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1656958">NSF
+    III-1656958</a>) and the <a href="projects/gvss/">Systems Graph
+Visualization</a> project (Grant No. <a
+    href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1844573">NSF
+    III-1844573</a>) and by Lawrence Livermore National Laboratory through
+sub-contracts LLNS B639881 and B630670 .</p>
+
+<p>CFGs:<br /> <a href="https://github.com/devkotasabin/CFGConf">CFGConf on Github</a> |  
+<a href="https://arxiv.org/abs/2009.00956">CCNav - VAST 2020</a> |  
+<a href="http://hdc.cs.arizona.edu/papers/cfgexplorer_preprint.pdf">CFGExplorer - EuroVis 2018</a> |  
+<a href="https://github.com/hdc-arizona/cfgexplorer">CFGExplorer on Github</a></p>
+
+<p>Graphs in ASCII:<br /> <a href="http://hdc.cs.arizona.edu/papers/tvcg_2018_graphterm_preprint.pdf">graphterm - TVCG 2019</a> |
+   <a href="papers/graphterm_supplemental.pdf">Survey of Graph Tools used by Github Projects</a></p>
+
+<p>General Graph Drawing:<br /> <a href="https://arxiv.org/abs/2005.04058">Alternate Data Abstractions - InfoVis 2020</a> |  
+<a href="https://alex-r-bigelow.github.io/wrangling-survey/Responses.html?viewIndex=0&filters=wpA">Alternate Data Abstractions Survey Data</a> | <br />
+<a href="https://arxiv.org/abs/1908.01769">Stress-Plus-X - Graph Drawing 2019</a> |  
+<a href="https://github.com/devkotasabin/stress-plus-x">Stress-Plus-X library</a></p>  
+
+    <p>NSF Project Websites:<br /><a href="projects/gvss/">Systems Graph Visualization</a> |
+<a href="https://hdc-arizona.github.io/projects/dependencies/">Visualizing Dependencies</a></p>
+
+</div>
+
+<div class="project">
+<h4>Traveler - Node-to-Code Visualization for Performance Analysis</h4>
+ <div class="project-images">
+ <a href="images/traveler.png"><img src="images/traveler-thumbnail.png"
+    alt="Screenshot of the Traveler performance visualization platform. Five view tabs in a configurable view system are shown. These views include the source code (syntax highlight text), expression tree (node-link diagram), utilization overview (area chart), Gantt chart of events, and a histogram of task durations. Highlighting the histogram (yellow box) shows the location of those long duration tasks in the other views."></a>
+ </div>
+
+ <div class="project-text">
+
+<p>Performance analysis is often a highly exploratory endeavor. Visualization
+can help make sense of the vast quantities of data that can be collected from
+advanced parallel applications. However, both visual encodings and rendering
+latency are often hampered by the scale of data to be shown. The problem is
+exacerbated when multiple datasets are to be analyzed in tandem. Through work
+supported by the Department of Energy (DOE Early Career Research Award) and
+the Defense Technical Information Center, we are addressing these challenges
+to bring scalable, interactive, and interoperable visualizations for
+performance analysis.</p>
+
+<p><a href="https://github.com/hdc-arizona/traveler-integrated">Traveler on Github</a> |
+    <a href="https://arxiv.org/abs/1905.13135">Atria - InfoVis '19 (ArXiv)</a></p>
+
+<p class="aux">As part of this effort, in collaboration with the <a
+href="http://stellar.cct.lsu.edu/">Ste||ar</a> group at LSU and the <a
+href="https://khuck.github.io/xpress-apex/">APEX</a> project at University of
+Oregon, we are re-thinking (visual) performance analysis from the runtime,
+    through the instrumentation, to the analysis and visual tools. Our work
+has thus previously served the <a
+href="http://phylanx.stellar-group.org/">Phylanx</a> project, building a
+distributed array toolkit targetting several data science applications.  </p>
+
+<p><a href="https://dl.acm.org/doi/abs/10.1145/3311790.3396657">Jetlag - PEARC '20</a></p>
+
+<p>See also: <a href="http://stellar.cct.lsu.edu/projects/hpx/">HPX Website</a></p>
+  </div>
+
+<div class="project">
+<h4>Interaction in Visualization in Jupyter Notebooks</h4>
+ <div class="project-images">
+ <a href="images/atria-jupyter.png"><img src="images/atria-jupyter-thumbnail.png"
+    alt="Screenshot of Atria's Jupyter variant. A portion of a Jupyter notebook is shown with scripting cells, output, and a visualization cell. The visualization shows the expression tree (node-link diagram). In the corners are tooltips that show more information about teh selection. The visualization is done through the Roundtrip library."></a>
+ </div>
+
+ <div class="project-text">
+
+<p>While some visual analyses are well-suited to stand-alone visualizaton
+systems, other visual analyses might be a relative small components of a
+larger endeavor. One example is a script-heavy analyses, such as those
+contained in Jupyter notebooks. We are exploring needs in visualization for
+such workflows and how the environment may affect what we consider
+interaction. To this end, we produced <a
+href="https://github.com/hdc-arizona/roundtrip">Roundtrip</a>, a library for
+integrating Javascript visualization in Jupyter notebooks and passing data
+between those JS visualization and Python scripting cells. Roundtrip has been
+used for this purpose in the <a
+href="https://github.com/hatchet/hatchet">Hatchet</a> performance analysis
+library as well as in a variant of <a
+href="https://arxiv.org/abs/1905.13135">Atria</a> and has been 
+supported by the Department of Energy (DOE Early Career Research Award) and
+the Defense Technical Information Center.</p>
+
+<p><a href="https://github.com/hdc-arizona/roundtrip">Roundtrip on Github</a> |
+   <a href="https://github.com/hatchet/hatchet">Hatchet on Github</a> |
+    <a href="https://arxiv.org/abs/1905.13135">Atria - InfoVis '19 (ArXiv)</a></p>
+
+  </div>
+
+<div class="project">
+<h4>Understanding How People Think About Data</h4>
+ <div class="project-images">
+ <a href="images/latent.png"><img src="images/latent-thumbnail.png"
+    alt="Diagram of data typology used in the Latent Data Abstractions study. It is a fully connected node-link diagram showing how Tabular, Media, Spatial/Temporal, Network/Hierarchy, Textual, and Grouped data all flow between each other as an abstraction."></a>
+ </div>
+
+ <div class="project-text">
+
+<p>A key part in any visualization project is understanding the data to be
+visualized. There are several factors regarding data, including the format,
+    ranges, meaning, and form. We seek to understand how people conceptuatlize
+their data and how we, as visualization designers and researchers, can improve
+our processes of data and workflow discovery. We conducted a study to delve
+deeper into questions about how people think and cast their data. We identify
+and define <i>latent data abstractions—data abstractions</i> which are useful
+and meaningful, but not yet fully gestated. We report on our observations and
+produce guidance for further data discovery.</p>
+
+
+<p><a href="https://arxiv.org/abs/2005.04058">Latent Data Abstractions - InfoVis 2020</a> |  
+<a href="https://alex-r-bigelow.github.io/wrangling-survey/Responses.html?viewIndex=0&filters=wpA">Latent Data Abstractions Survey Data</a></p>
+
+  </div>
+</div>
+
+<div class="project">
+<h4>Integrating Citizen Science, Environmental, and Socio-Economic Data</h4>
+ <div class="project-images">
+ <a href="images/gardenroots-for-src.png"><img src="images/gardenroots-for-src-thumbnail.png"
+    alt="Images from our design in-progress for sharing citizen science data visually. Two maps of Arizona are shown with different datasets. The data is shown as circles, placed at the centroid of their area to maintain privacy. The size of the circles indicates the number of samples. The color indicates the concentration of the contaminant. On the left map, hovering over a circle shows the breakdown of individual datapoints."></a>
+ </div>
+
+ <div class="project-text"> 
+
+    <p> Health is affected by myriad factors including one's environment and
+circumstances. As part of the <a
+href="https://www.superfund.arizona.edu/">UArizona Superfund Research
+Center</a>, we are gathering data from a wide variety of sources, from
+government agencies to citizen scientists, to better understand how
+communities can build resiliencies to environmental hazards. We are
+integrating this dataset so it is Findable, Accessible, Interoperable, and
+Reusable (FAIR) while protecting sensitive data contributed by individuals.
+    The data is being made available through a publically accessible site. We
+are building a visual analytics system to allow stakeholders to explore and
+download facets of the data.  </p>
+
+<p>
+<a href="https://www.frontiersin.org/articles/10.3389/fsufs.2021.620470/full">Data Integration - Frontiers</a>
+</p>
+    </div>
+
+
+<h3>Past Projects & Themes</h3>
+
+<div class="project">
+<h4>Understanding the Space of Infographics</h4>
+ <div class="project-images">
+ <a href="images/infographics-classification.png"><img src="images/infographics-classification-thumbnail.png"
+    alt="Classification tree of inforgraphics generated in our study. Each infographic is shown as a thumbnail in its group. Bar charts, proportion-as-quantity, and area-as-quantity are numerous. Other groups include geographical, unit-based, single circle, and flag-based visualizations."></a>
+ </div>
+
+ <div class="project-text">
+ <p>
+
+Infographics are a widely-viewed visualization medium, used to communicate and
+engage the general public with data on a wide breadth of subjects. To better
+understand the space of infographics, we derive a classification using the
+groupings of people from that general public on a corpus of infographics. We
+found people grouped them by their primary data encoding over other criteria
+such as aesthetics and complexity and that there was a prevalence in
+    area-as-quantity and proprotion-as-quantity, not typically associated with
+a common chart type.</p>
+
+</p>
+
+<p>
+<a href="http://hdc.cs.arizona.edu/papers/diagrams_infographics_2018.pdf">Classification of Infographics - Diagram 2018</a>
+</p>
+
+<div class="project">
+<h4>Control Flow Graphs and Dynamic Traces, with Science Up To Par (s2par): Language Agnostic Optimization of Scientific Data Analysis Codes</h4>
+ <div class="project-images">
+ <a href="images/miniflux_big.png"><img src="images/miniflux.png" height=150
+    alt="Portion of a graph layout of the control flow graph of Catherine Olschanowsky's miniflux benchmark, using the CFGExplorer layout. Loops in the code are shown as nesting in this layout, with a deepening blue background color indicating the nesting depth."></a>
+ </div>
+
+ <div class="project-text">
+
+<p> Parallelizing scientific and data analysis applications can require
+significant engineering effort. For in-development applications and frequently
+altered data analysis scripts especially, the time commitment is a significant
+barrier to the gains of parallelization. Science Up To Par applies dynamic
+binary analysis and specialization to automatically parallelize scientific
+applications in a language-independent manner. This project is in collaboration
+with <a href="http://cgi.cs.arizona.edu/~mstrout/">Michelle Strout</a> and <a
+href="https://www2.cs.arizona.edu/~debray/">Saumya Debray</a>. In support of
+these efforts, as part of the NSF-funded <a
+href="https://hdc-arizona.github.io/projects/dependencies/">Dependencies
+Visualization</a> project, we are developing visual tools for analyzing control
+flow graphs and dynamically collected instruction traces. This material is
+based upon work supported by the National Science Foundation under Grant No. <a
+href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1656958">NSF
+III-1656958</a>.</p>
+
+<p><a href="https://hdc-arizona.github.io/projects/dependencies/">Visualizing Dependencies Project Website</a></p>
+<p><a href="https://link.springer.com/chapter/10.1007%2F978-3-030-35225-7_4">s2par Project Overview - LCPC 2017</a></p>
+<p><a href="http://hdc.cs.arizona.edu/papers/cfgexplorer_preprint.pdf">CFGExplorer - EuroVis 2018</a> |  
+<a href="https://github.com/hdc-arizona/cfgexplorer">CFGExplorer on Github</a></p>
+
+  </div>
+</div>
+
+
+<div class="project">
+<h4>Ravel - Parallel Execution Trace Visualization</h4>
+ <div class="project-images">
+ <a href="images/mgS16ravel.png"><img src="images/mgS16ravel-thumbnail.png"
+    alt="Screenshot from the Ravel trace visualization software. The top of the image shows a logical time Gantt chart, revealing communication patterns in the trace. The colors of the events show how late each one was with respect to its peers. The bottom shows a traditional Gantt chart, also colored by lateness."></a>
+ </div>
+
+ <div class="project-text">
+<p>
+Traces are records of actions occurring during a program's execution, such as
+function calls and communication. They are a powerful tool in performance
+analysis as they can contain the detailed data necessary to reconstruct
+exactly what occurred. However, understanding traces is
+difficult due to the huge number of actions and relationships among all
+processes. As such, timeline visualizations are frequently employed to explore the data.
+Unfortunately, timelines become cluttered and difficult to interpret for even moderate numbers of
+processes.
+</p>
+
+<p>Ravel focuses on increasing the scalability and utility of trace visualizations
+via a structure-centric approach which approximates the developers' intended
+organization of trace events. Visualizing this logical structure untangles
+communication patterns, allows aggregation in process space, and provides users
+with much needed context.  Analyses using Ravel have led to the discovery and
+understanding of performance issues in several massively parallel applications.
+</p>
+
+<p>
+<a href="papers/isaacs_ravelganttchart_tvcg2014.pdf">Visualization - InfoVis '14</a> |
+<a href="http://github.com/LLNL/ravel">Ravel on github</a>
+</p>
+
+<p>
+<a href="papers/isaacs_idealizedtime_tpds2016.pdf">Logical structure (MPI) - TPDS 2016</a> |  
+<a href="papers/isaacs_amtvisualization_sc2015.pdf">Logical structure (Charm++) - SC15</a> 
+</p>
+
+  </div>
+</div>
+
+<div class="project">
+<h4>Boxfish - Linking Domains and Network Visualization</h4>
+ <div class="project-images">
+ <a href="images/5dtorus.png"><img src="images/5dtorus-thumbnail.png"
+    alt="Screenshot from Boxfish showing multiple views of a 5-dimensional torus, including small multiples of 2D projections and minimaps as well as 3D slices in multiple layouts. Color shows the traffic across each link in the network."></a>
+ </div>
+
+ <div class="project-text">
+ <p>
+Numerous factors, such as the placement of specific tasks in the hardware,
+their timing data, and functions of multiple tasks, affect the performance of
+parallel applications. Boxfish was developed to support visualizing these
+relationships. Boxfish manages complex filtering of data and linking of
+visualizations, even when these relationships are not direct or bijective.
+Several network visualization modules have been developed for Boxfish,
+including multiple views of 3D torus/mesh networks and a 5D torus/mesh.
+Analysis using these visualizations in Boxfish has aided in understanding the
+interactions of task assignment and the underlying system network for both
+individual applications and the interactions of several applications on a
+shared system.
+ </p>
+
+<p>
+<a href="http://github.com/LLNL/boxfish">Boxfish on github</a> |
+<a href="http://www.idav.ucdavis.edu/~ki/publications/scc12.pdf">Boxfish poster abstract - SC12</a>
+</p>
+
+<h4>Visualization Modules</h4>
+<p>
+<a href="papers/landge_torusvis_tvcg2012.pdf">3D torus visualization - InfoVis '12</a> |
+<a href="papers/mccarthy_5dtorusvis_vpa2014.pdf">5D torus visualization - VPA '14</a>
+</p>
+
+<h4>Applications</h4>
+<p>
+<a href="papers/bhatele_subcommunicators_sc2012.pdf">Task mapping - SC12</a>  |
+<a href="papers/bhatele_neighborhood_sc2013.pdf">Job placement - SC13</a> |
+<a href="papers/mccarthy_5dtorusvis_vpa2014..pdf">Task mapping, 5D torus - HiPC '14</a>
+</p>
+ </div>
+
+</div>
+
+<div class="project">
+<h4>Scalable Communication Visualization</h4>
+ <div class="project-images">
+ <a href="images/samrai-tree.png"><img src="images/samrai-tree-thumbnail.png"
+    alt="Image of the samrai tree communication pattern. Individual processors are shown as circles and aggregated as arcs. Color shows how long those processors took to complete their work. Arcs are colored by the proportion of high (red) and low (blue) values. The aggregation is expanded along a path of heavy communication. The amount of communication between groups of processors is shown by the size of the black arrows."></a>
+ </div>
+
+ <div class="project-text">
+ <p>
+Traditional statistical plots and graphics for performance analysis may prove
+ineffective because they do not show data in the most meaningful context. For
+one library, this meant mapping performance data to its communication overlay.
+The communication graph grows as the application uses increasing numbers of
+parallel processes. This requires a visualization that aggregates intelligently
+to scale with that parallism while still depicting behaviors of interest.
+</p>
+
+<p>
+<a href="papers/bhatele_novelviews_sc2012.pdf">Novels Views - SC12</a>
+</p>
+
+ </div>
+
+</div>
+
+</div>
+</body></html>

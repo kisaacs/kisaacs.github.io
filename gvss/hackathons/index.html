@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Data Visualization Workshops</title>
+    <meta charset="utf-8" />
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.9.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.0.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.2.1"></script>
+    <script src="hackaz_data.js"></script>
+
+    <style media="screen">
+      /* Add space between Vega-Embed links  */
+      .vega-actions a {
+        margin-right: 5px;
+      }
+
+      div {
+	display: inline-block;
+	float: top;
+	vertical-align: top;
+	margin-right: 25px;
+      }
+
+      li {
+	font: 14pt sans-serif;
+	padding: 5px;
+      }
+
+      a {
+	color: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Data Visualization with Vega-Lite Workshop Files</h1>
+    <div>
+	<ul><li>ResBaz - May 17, 2021</li>
+	  <ul>
+	      <li><a href="ResBazVegaLiteWorkshop2021.zip">Code-Along Files</a></li>
+	      <li><a href="ResBazVegaLiteWorkshop2021.pptx">Workshop Slides (5.3 MB, PPTX)</a></li>
+	  </ul>
+	</ul>
+	<ul><li>ResBaz - May 20, 2020</li>
+	  <ul>
+	      <li><a href="ResBazVisWorkshop2020.zip">Code-Along Files</a></li>
+	      <li><a href="ResBazDataVisWorkshopSlides.pdf">Workshop Slides (9.0 MB)</a></li>
+	  </ul>
+	</ul>
+	<ul><li>HackAZ - January 18, 2020</li>
+	  <ul>
+	      <li><a href="hackazdatavis.zip">Code-Along Files</a></li>
+	      <li><a href="HackAZDataVisWorkshop.pdf">Workshop Slides</a></li>
+	  </ul>
+	</ul>
+    </div>
+    <!-- Container for the visualization -->
+    <div id="vis"></div>
+
+    <script>
+      // YOUR SPECIFICATION GOES HERE
+	
+      /*** Small Dataset ***/
+
+	// Scatter plot
+	var simpleSpec = {
+	  width: "300",
+	  height: "300",
+	  data: {
+	    values: small
+	  },
+	  mark: 'point',
+	  encoding: {
+	    y: {
+	     field: 'temp', 
+	     type: 'quantitative'
+	    },
+	    x: {
+	      field: 'weather',
+	      type: 'nominal',
+	      axis: { labelFontSize: 20, titleFontSize: 20 }
+	    }
+	  },
+	};
+
+        mySpec = simpleSpec;
+	
+
+	// Bar chart (average temp)
+	var simpleSpecBar = {
+	  width: "300",
+	  height: "300",
+	  data: {
+	    values: small
+	  },
+	  mark: 'bar',
+	  encoding: {
+	    y: {
+	     field: 'temp', 
+	     type: 'quantitative',
+	     aggreggate: 'average'
+	    },
+	    x: {
+	      field: 'weather',
+	      type: 'nominal',
+	      axis: { labelFontSize: 20, titleFontSize: 20 }
+	    }
+	  },
+	};
+
+        mySpec = simpleSpecBar;
+	
+	// Histogram (binning)
+	var simpleSpecHist = {
+	  width: "300",
+	  height: "300",
+	  data: {
+	    values: small
+	  },
+	  mark: 'bar',
+	  encoding: {
+	    y: {
+	     type: 'quantitative',
+	     aggregate: 'count'
+	    },
+	    x: {
+	      field: 'temp',
+	      type: 'quantitative',
+	      bin: true,
+	      axis: { labelFontSize: 20, titleFontSize: 20 }
+	    }
+	  },
+	};
+
+        mySpec = simpleSpecHist;
+
+	// Histogram (setting bin width)
+	var simpleSpecHistLimit = {
+	  width: "300",
+	  height: "300",
+	  data: {
+	    values: small
+	  },
+	  mark: 'bar',
+	  encoding: {
+	    x: {
+	      field: 'temp',
+	      type: 'quantitative',
+	      bin: { step: 5 }
+	    },
+	    y: {
+	     type: 'quantitative',
+	     aggregate: 'count'
+	    }
+	  },
+	};
+
+        mySpec = simpleSpecHistLimit;
+    
+      /*** STARBUCKS DATA ***/
+
+	// Simple Starbucks scatterplot
+	var scatterSpec = {
+	  width: "300",
+	  height: "300",
+	  data: {
+	    values: drinks
+	  },
+	  mark: 'circle',
+	  encoding: {
+	    y: {
+	      field: 'Sugars (g)', 
+	      type: 'quantitative'
+	    },
+	    x: {
+	      field: 'Calories',
+	      type: 'quantitative'
+	    }
+	  }
+	};
+	
+	// Starbucks scatterplot with caffeine as size
+	var scatterSizeSpec = {
+	  width: "300",
+	  height: "300",
+	  data: {
+	    values: drinks
+	  },
+	  mark: 'circle',
+	  encoding: {
+	    y: {
+	      field: 'Sugars (g)', 
+	      type: 'quantitative'
+	    },
+	    x: {
+	      field: 'Calories',
+	      type: 'quantitative'
+	    },
+	    size: {
+	      field: 'Caffeine (mg)',
+	      type: 'quantitative'
+	    }
+	  }
+	};
+	
+	// Starbucks scatterplot with caffeine as color
+	var scatterColorSpec = {
+	  width: "300",
+	  height: "300",
+	  data: {
+	    values: drinks
+	  },
+	  mark: 'circle',
+	  encoding: {
+	    y: {
+	      field: 'Sugars (g)', 
+	      type: 'quantitative'
+	    },
+	    x: {
+	      field: 'Calories',
+	      type: 'quantitative'
+	    },
+	    color: {
+	      field: 'Caffeine (mg)',
+	      type: 'quantitative'
+	    }
+	  }
+	};
+
+        mySpec = scatterColorSpec;
+	
+	// Starbucks scatterplot with caffeine as color, increased size
+	var scatterColorBiggerSpec = {
+	  width: "300",
+	  height: "300",
+	  data: {
+	    values: drinks
+	  },
+	  mark: 'circle',
+	  title: 'Nutritional Information For Starbucks Drinks',
+	  encoding: {
+	    y: {
+	      field: 'Sugars (g)', 
+	      type: 'quantitative'
+	    },
+	    x: {
+	      field: 'Calories',
+	      type: 'quantitative'
+	    },
+	    color: {
+	      field: 'Caffeine (mg)',
+	      type: 'quantitative'
+	    },
+	    size: {
+	      value: 100
+	    }
+	  }
+	};
+
+        mySpec = scatterColorBiggerSpec;
+	
+	// Starbucks scatterplot with caffeine as color, increased size,
+	// custom color scale
+	var scatterColorCustomSpec = {
+	  width: "300",
+	  height: "300",
+	  data: {
+	    values: drinks
+	  },
+	  mark: 'circle',
+	  encoding: {
+	    y: {
+	      field: 'Sugars (g)', 
+	      type: 'quantitative'
+	    },
+	    x: {
+	      field: 'Calories',
+	      type: 'quantitative'
+	    },
+	    color: {
+	    field: 'Caffeine (mg)',
+	    type: 'quantitative',
+	    scale: { range: ['purple', 'orange'] }
+	  },
+	  size: {
+	    value: 100
+	  }
+	 }
+	};
+
+        mySpec = scatterColorCustomSpec;
+    
+	// Automatic boxplots for Starbucks drinks
+        var boxplotSpec = {
+	  width: "300",
+	  height: "300",
+          data: {
+            values: drinks
+          },
+          mark: 'boxplot',
+          encoding: {
+            y: {
+	      field: 'Beverage_category', 
+	      type: 'nominal'
+	    },
+            x: {
+              field: 'Calories',
+	      aggregate: 'average',
+              type: 'quantitative'
+            },
+	    color: {
+	      field: 'Calories',
+	      aggregate: 'average',
+	      type: 'quantitative',
+	      scale: { range: ['purple', 'orange'] }
+	    }
+          }
+        };
+	
+	// Automatic boxplots for Starbucks drinks
+        var drinksBarSpec = {
+	  width: "300",
+	  height: "300",
+          data: {
+            values: drinks
+          },
+          mark: 'bar',
+	  title: 'Average Calories for Starbucks Drink Categories',
+          encoding: {
+            y: {
+	      field: 'Beverage_category', 
+	      type: 'nominal'
+	    },
+            x: {
+              field: 'Calories',
+	      aggregate: 'average',
+              type: 'quantitative'
+            }
+          }
+        };
+    
+	// Histogram for Starbucks drinks
+        var histSpec = {
+	  width: "300",
+	  height: "300",
+          data: {
+            values: drinks
+          },
+          mark: 'bar',
+	  title: 'Distribution of Calories in Starbucks Drink Menu',
+          encoding: {
+            y: {
+	      aggregate: 'count', 
+	      type: 'quantitative'
+	    },
+            x: {
+              field: 'Calories',
+	      bin: true,
+              type: 'quantitative'
+            }
+          }
+        };
+      
+	// Tooltip demonstration
+        var tooltipSpec = {
+	  width: "300",
+	  height: "300",
+          data: {
+            values: drinks
+          },
+	  mark: { type: 'circle', tooltip: { content: 'data' } },
+          encoding: {
+            y: {
+	      field: 'Caffeine (mg)', 
+	      type: 'quantitative'
+	    },
+            x: {
+              field: 'Calories',
+              type: 'quantitative'
+            },
+	    color: {
+	      field: 'Calories',
+	      type: 'quantitative',
+	      scale: { range: ['purple', 'orange'] }
+	    },
+	    size: {
+	      value: 100
+	    }
+          }
+        };
+
+    /*** TEMPORAL DATA ***/
+      
+      // line chart
+      var lineSpec = {
+	width: "300",
+	height: "300",
+        data: {
+          values: ufos
+        },
+	title: "UFO Sightings in AZ",
+	mark: { type: 'line', tooltip: { content: 'data' } },
+	encoding: {
+	  y: {
+	      field: '*',
+	      type: 'quantitative',
+	      aggregate: 'count'
+	  },
+	  x: {
+	    field: 'Date',
+	    timeUnit: 'yearmonth',
+	    type: 'temporal'
+	  }
+	}
+      };
+      
+      // UFO bar chart
+      var ufoBarSpec = {
+	width: "300",
+	height: "300",
+        data: {
+          values: ufos
+        },
+	title: "UFO Sightings in AZ",
+	mark: { type: 'bar', tooltip: { content: 'data' } },
+	encoding: {
+	  x: {
+	      field: '*',
+	      type: 'quantitative',
+	      aggregate: 'count'
+	  },
+	  y: {
+	    field: 'Date',
+	    timeUnit: 'month',
+	    type: 'temporal'
+	  }
+	}
+      };
+
+      // Multi-layer UFO line chart
+      var layerSpec = {
+	width: "300",
+	height: "300",
+        data: {
+          values: ufos
+        },
+	title: "UFO Sightings in AZ",
+	layer: [
+	 {
+	    mark: { type: 'line', tooltip: { content: 'data' } },
+	    encoding: {
+	      y: {
+		  field: '*',
+		  type: 'quantitative',
+		  aggregate: 'count'
+	      },
+	      x: {
+		field: 'Date',
+		timeUnit: 'yearmonth',
+		type: 'temporal'
+	      },
+	      color: {
+		  field: '*',
+		  type: 'quantitative',
+		  aggregate: 'count',
+		scale: { range: ['purple', 'orange'] }
+	      }
+	    }
+	  },
+	 {
+	    mark: { type: 'circle', tooltip: { content: 'data' } },
+	    encoding: {
+	      y: {
+		  field: '*',
+		  type: 'quantitative',
+		  aggregate: 'count'
+	      },
+	      x: {
+		field: 'Date',
+		timeUnit: 'yearmonth',
+		type: 'temporal'
+	      },
+	      size: {
+	        value: 100
+	      },
+	      color: {
+		  field: '*',
+		  type: 'quantitative',
+		  aggregate: 'count',
+		scale: { range: ['purple', 'orange'] }
+	      }
+	    }
+	  }
+	]
+      };
+      
+      // Embed the visualization in the container with id `vis`vegaEmbed('#vis', tooltipSpec);
+      vegaEmbed('#vis', tooltipSpec);
+    </script>
+
+  </body>
+</html>

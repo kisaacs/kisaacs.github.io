@@ -1,0 +1,157 @@
+.leftdiv {
+  position: fixed;
+  margin-top: 0px;
+  top: 0px;
+  left: 10px;
+  width: 150px;
+  font-family: Geneva, Helvetica, Arial, sans-serif;
+  font-size: 80%;
+}
+
+.leftfooterdiv {
+  position: fixed;
+  bottom: 20px;
+  height: 15px;
+  left: 10px;
+  width: 150px;
+  font-family: Geneva, Helvetica, Arial, sans-serif;
+  font-size: 30%;
+}
+
+.smallimg {
+  padding-left: 21px;
+}
+
+.smalltext {
+  font-size: 60%;
+}
+
+.footerdiv {
+  position: fixed;
+  bottom: 25px;
+  height: 20px;
+  margin-left: 150px;
+  padding-left: 25px;
+  width: 640px;
+  text-align: justify;
+  font-size: 50%;
+  font-family: Geneva, Helvetica, Arial, sans-serif;
+}
+.main {
+  position: absolute;
+  margin-left: 150px;
+  padding-left: 25px;
+  padding-top: 10px;
+  font-family: Geneva, Helvetica, Arial, sans-serif;
+  width: 600px;
+}
+
+.center {
+  position: absolute;
+  margin-left: 150px;
+  padding-left: 25px;
+  padding-top: 0;
+  margin-top: -1em;
+  bottom: 25px;
+  font-family: Geneva, Helvetica, Arial, sans-serif;
+  width: 640px;
+  text-align: justify;
+}
+
+.pubs {
+  position: absolute;
+  margin-left: 150px;
+  padding-left: 25px;
+  padding-top: 0;
+  margin-top: -1em;
+  font-family: Geneva, Helvetica, Arial, sans-serif;
+  width: 640px;
+  text-align: justify;
+}
+.project {
+  padding-bottom: 0;
+}
+.project-text {
+  font-family: Geneva, Helvetica, Arial, sans-serif;
+  font-size: 90%;
+  padding-bottom: 0;
+}
+.project-images {
+  float: right;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  padding: 1px;
+  border: 1.5px solid #990000;
+}
+img {
+  display: block;
+}
+p {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-size: 10pt;
+}
+
+.mainul {
+  font-size: 10pt;
+}
+
+
+h2 {
+  margin-top: 1em;
+  margin-bottom: 0.2em;
+  margin-left: 0;
+  margin-right: 0;
+}
+h3 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  margin-left: 0;
+  margin-right: 0;
+}
+h4 {
+  margin-top: 1.5em;
+  margin-bottom: 0.25em;
+}
+ul.navbar {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+ul.navbar li {
+  margin-left: 0.5em;
+  margin-bottom: 0.5em;
+  border-right; 1em solid black;
+}
+ul.external {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+ul.external li {
+  margin-left: 0.5em;
+  margin-bottom: 0.5em;
+  border-right; 1em solid black;
+}
+ul.contact {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+ul.contact li {
+  margin-left: 0.5em;
+  margin-bottom: 0.5em;
+  border-right; 1em solid black;
+}
+a {
+  text-decoration: none;
+}
+a:link {
+  color: #CC0000;
+}
+a:visited {
+  color: #CC0000;
+}

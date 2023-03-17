@@ -1,0 +1,1 @@
+define({availablePdf: ["Isaacs2014STAR"]});

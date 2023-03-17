@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CAREER: Comprehensive Techniques and Design for Flexible Graph Visualization of Software and Systems</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="dep.css", media="screen" />
+    <link rel="shortcut icon" href="../../favicon.ico" />
+  </head>
+    <script src="https://code.jquery.com/jquery-1.8.3.js"></script>
+    <script src="https://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+  <body>
+    <div id="leftnav" class="leftnav">
+
+
+<div class="leftdiv">
+<!-- Navigation -->
+<!--
+<ul class="navbar">
+  <li><a href="#Top">Top</a></li>
+  <li><a href="#News">News</a></li>
+  <li><a href="#Publications">Publications</a></li>
+</ul>
+-->
+
+<!-- Contact -->
+
+<h3>Project Details</h3>
+<ul class="external">
+    <li>Project Number:
+	<ul class="external">
+	    <li>NSF IIS-<a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1844573">1844573</a></li>
+	</ul>
+    </li>
+    <li>Duration:
+	<ul class="external">
+	    <li>2019/8/1 - 2024/7/31</li>
+	</ul>
+    </li>
+    <li>PI: <a href="http://hdc.cs.arizona.edu/people/kisaacs/">Kate Isaacs</a></li>
+    <li>Students:
+	<ul class="external">
+		<li>Katy Williams</li>
+	</ul>
+    </li>
+    <li>Former Students:
+	<ul class="external">
+		<li>Sabin Devkota</li>
+	</ul>
+    </li>
+</ul>
+
+<h3>Software Downloads</h3>
+<ul class="external">
+  <li><a href="http://github.com/devkotasabin/CFGConf">CFGConf</a></li>
+  <li><a href="http://github.com/devkotasabin/SPX-graph-layout">Stress-Plus-X</a></li>
+</ul>
+
+<h3>Data Downloads</h3>
+<ul class="external">
+  <li><a href="https://alex-r-bigelow.github.io/wrangling-survey/Responses.html?viewIndex=0&filters=wpA">Data abstraction survey results</a></li>
+</ul>
+
+<h3>Educational Materials</h3>
+<ul class="external">
+	<li><a href="hackathons/index.html">Visualization Hackathon Workshop</a></li>
+	<li><a href="https://github.com/hdc-arizona/graph-drawing-libraries-primer">Primer on Graph Drawing APIs</a></li>
+	<li><a href="VisGraphSlides.pptx">Graph Visualization Slides</a></li>
+	<li><a href="APIDesignSlides.pptx">Undergraduate API Design Slides</a></li>
+</ul>
+
+<!-- <a href="images/cfgexplorer-big.png"><img src="images/cfgexplorer-big.png" height=350 class="sideimg"/></a>
+<p class="smalltext">Control Flow Graph rendered by CFGExplorer.</a>-->
+
+</div>
+
+
+<div class="leftfooterdiv">
+Contact: <a href="http://hdc.cs.arizona.edu/people/kisaacs/">Kate Iaacs</a><br />
+
+Last Updated: 2022/07/24
+</div>
+    </div>
+
+    <div id="Top" class="pubs">
+      <h3>NSF <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1844573">1844573</a>: CAREER: Comprehensive Techniques and Design for Flexible Graph Visualization of Software and Systems</h3>
+
+<p>
+Computationally-assisted drug discovery, predictions of hurricane trajectories, and simulations of new energy sources are all made possible by underlying software (programs). To construct these programs, software developers must divide each problem into smaller operations and order those operations carefully to compute the correct answer. This ordering can be viewed as a network graph, where each operation points to its next possible operations in order. Furthermore, to make these programs run fast enough to be useful, developers, engineers, and researchers must find new ways to balance those operations with system resources such as storage, processing units, and memory. These resource constraints add more ordering requirements to the graph. Verifying this graph can help avoid bugs. Information inferred from this graph can be used to automatically decrease the time the program requires to run. Thus, people working in computing frequently examine these graphs to generate or validate new ideas about how to write their programs or use computational resources. For example, a programmer may discover a long sequence of operations performed one after another that could be parallelized, thus making the program faster. General approaches for drawing networks have not met the demand of graphs in the computing space, resulting in difficult to interpret, if not unusable, diagrams. The purpose of this project is to develop new graph visualization approaches to better support developers, engineers, and researchers in their work and learners in their understanding of computing and their integration of tools such as graph visualization into their skill sets.
+</p>
+<p>
+Graphs arising from computing contexts frequently take the form of directed acyclic or near-acyclic graphs (DAG-like graphs). The aim of this project is to develop layout algorithms and design guidelines specifically for this class of computing graphs. Research tasks include surveying graphs generated across computing disciplines to derive a characterization of their structure, their domain-specific sub-structures, and their common drawing conventions. The characterization will guide the development of constraints and objectives for layout of node-link diagrams as well as design guidelines for interactivity and visual encoding in support of domain-specific tasks. The results will be implemented in an open-source library and evaluated for both expressivity of computing structures and computational performance.
+</p>
+
+    <p><b>Current Results:</b>
+	<ul class="mainul">
+	    <li>A CFG drawing library (<a href="http://github.com/hcd-arizona/CFGConf">CFGConf</a>), incorporating CFG drawing conventions and supporting filtering tasks through a JSON specification. This drawing is embeddable in multi-view web-based visualizations. In our <a href="https://arxiv.org/abs/2108.03047">evaluation</a> systems workers were able to draw CFGs with CFG-specific drawing conventions and use the specification for filtering similar to their manual workflow.</li>
+	    <li><a href="https://arxiv.org/abs/2009.00956">Findings on transferrability in systems graph visualization</a> discovered through a design study on binary code.</li>
+	    <li><a href="https://arxiv.org/abs/2005.04058">Guidelines for pursuing and revealing data abstractions</a> in data visualization projects</li>
+	    <li>An optimization-based graph layout approach (<a href="https://arxiv.org/abs/1908.01769">Stress-Plus-X</a>) that balances multiple graph drawing criteria.</li>
+	    <li>An <a href="hackathons/index.html">introductory data visualization workshop</a> for hackathons and similar events</li>
+	</ul>
+    </p>
+
+    <p><b>Impact:</b>
+       <ul class="mainul">
+            <li><a href="https://osf.io/kvnb9/">Study data</a> and <a href="https://github.com/kawilliams/mental-models-codes">code analysis thereof</a> to understand de novo representations of graphs and other data.</li>
+            <li><a href="http://github.com/llnl/CcNav">CcNav</a>, a visual tool for understanding diassembled binaries, uses <a href="https://github.com/hdc-arizona/CFGConf">CFGConf</a> for its CFG views.</li>
+	     <li><a href="https://github.com/hdc-arizona/CFGConf">CFGConf library</a> is available on Github.</li>
+	    <li><a href="https://alex-r-bigelow.github.io/wrangling-survey/Responses.html?viewIndex=0&filters=wpA">Survey data</a> and <a href="https://osf.io/382fn/">coded analysis thereof</a> to understand data abstractions beyond tables (e.g., graphs)</li> 
+	     <li><a href="https://github.com/devkotasabin/SPX-graph-layout">Stress-Plus-X library</a> is available on Github.</li>
+	    <li>Our <a href="hackathons/index.html">introductory data visualization workshop</a> has been attended by over 50 learners.</li>
+       </ul>
+    </p>
+
+    <p>
+    This material is based upon work supported by the National Science Foundation under Grant No. <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1844573">1844573</a>.
+    </p>
+
+    <div id="News" class="project">
+      <h3>News</h3>
+	<ul class="maiul">
+            <li>2022/07 - Come hear about overcoming pain points in performance analysis, with several systems networks examples, at the NREL Connections Semianr! July 26 @ 11am!</li>
+            <li>2022/06 - CFGConf user study data and CDN heuristic evaluation are available at <a href="https://osf.io/d375t/">osf.io/d375t</a>.</li>
+            <li>2022/06 - Come hear about integrating visualization and performance analysis, with several systems networks examples, at the <a href="https://permavost.github.io/">PERMAVOST</a> workshop at HPDC! Thursday June 30!</li>
+            <li>2022/03 - <a href="https://github.com/kawilliams/mental-models-codes">Codes</a> and <a href="https://osf.io/kvnb9/">study data</a> are available for our abstractions study at Github and OSF respectively.
+	    <li>2021/11 - <a href="http://github.com/llnl/CcNav">CcNav</a>, an integrated visual analysis tool for understanding compilation, is available open source. What did the compiler do to your code? Explore source, diassembly, CFGs, inlining, and more!</li>
+            <li>2021/10 - Come hear more about drawing control flow graphs at the Missouri S&T CS Colloquium, Monday October 4 @ 10AM!</li>
+            <li>2021/08 - A preliminary version of our <a href="https://arxiv.org/abs/2108.03047">CFGConf paper</a> is now on ArXiv.</li>
+	    <li>2021/08 - Congratulations our new Ph.D., Dr. Sabin Devkota!</li>
+	    <li>2021/07 - Our new CFG library, <a href="http://github.com/hdc-arizona/CFGConf">CFGConf</a>, is available open-source. Use it to filter and draw CFGs through a JSON spec and/or embed in multi-view web-based visualizations!</li>
+	    <li>2021/05 - Come visit our Data Visualization Workshop at <a href="http://researchbazaar.arizona.edu/">ResBaz</a>! Monday May 17 @ 3 PM Pacific!</li>
+	    <li>2021/04 - Interested in Strategies for Visualizing Networks? Come see our talk Wednesday April 21st at 1:20 PM Pacific at the <a href="https://widstucson.org/">Women in Data Science - Tucson</a> conference!</li>
+	    <li>2020/10 - Come hear about <a href="https://arxiv.org/abs/2009.00956">CcNav: Understanding the Compilation of Binary Code</a> Wednesday October 28th @ 8:15 AM Pacific at IEEE VIS!</li>
+	    <li>2020/10 - Check out our <a href="https://arxiv.org/abs/2005.04058">Guidelines for Pursuing and Revealing Data Abstractions</a> Thursday October 29th @ 7:15 AM Pacific at IEEE VIS!</li> 
+	    <li>2020/05 - Come visit our Data Visualization Workshop at <a href="http://researchbazaar.arizona.edu/">ResBaz</a>! Wednesday May 20 @ 1 PM!</li>
+	    <li>2020/01 - Come visit our Data Visualization Workshop at <a href="http://hackaz.io/">HackAZ</a>! Saturday January 18 @ 1 PM!</li>
+	    <li>2019/12 - We're assembling a <a href="https://github.com/hdc-arizona/graph-drawing-libraries-primer">Primer on using Graph Drawing Libraries</a>.</li>
+	    <li>2019/09 - We participated in the <a href="http://mozart.diei.unipg.it/gdcontest/contest2019/challenge.html">Graph Drawing 2019 Live Challenge Contest</a> using Stress-Plus-X.</li>
+	    <li>2019/08 - Check out <a href="https://arxiv.org/abs/1908.01769">Stress-Plus-X Graph Layout</a>, supported in part by this project and accepted for presentation at <a href="https://kam.mff.cuni.cz/gd2019/">Graph Drawing 2019.</a></li>
+	    <li>2019/08 - Project start date</li>
+	</ul>
+    </div>
+
+    <div id="Publications" class="project">
+      <h3>Publications</h3>
+
+<p>S. Devkota, P. Aschwanden, A. Kunen, M. Legendre, and <b>K. E. Isaacs</b>.
+    CcNav: Understanding the Compilation of Binary Code. <i>IEEE Transactions
+on Visualization and Computer Graphics, Proceedings of VAST '20.</i> January
+2021.<br/> 
+
+<a href="https://arxiv.org/abs/2009.00956">PDF (Arxiv)</a></p>
+
+
+<p>A. Bigelow, K. Williams, and <b>K. E. Isaacs</b>. Guidelines for Pursuing
+and Revealing Data Abstractions. <i>IEEE Transactions on Visualization and
+Computer Graphics, Proceedings of InfoVis '20.</i> January 2021.<br/> 
+
+<a href="https://arxiv.org/abs/2005.04058">PDF (Arxiv)</a> |
+<a href="https://alex-r-bigelow.github.io/wrangling-survey/Responses.html">Survey Data</a> |
+<a href="https://osf.io/382fn/">Codes (OSF)</a></p>
+    
+<p>S. Devkota, A. R. Reyan, F. De Luca, K. Isaacs, and S. Kobourov.
+    <i>Stress-Plus-X (SPX) Graph Layout.</i> Proceedings of Graph Drawing 2019.<br />
+
+    <a href="http://arxiv.org/abs/1908.01769">PDF (ArXiv)</a> | <a href="https://github.com/devkotasabin/SPX-graph-layout">Github</a>
+</p>
+
+   </div>
+
+    <div id="Presentations" class="project">
+      <h3>Presentations</h3>
+
+<p>K. Isaacs. <i>Integrating Visualization (and Visualization Experts) with
+Performance Analysis.</i> Invited Talk. 2nd Workshop on Performance EngineeRing, Modelling,
+    Analysis, and VisualizatiOn STrategy (PERMAVOST) held in conjunction with
+HPDC 2022, Minneapolis, Minnesota, USA. June 30, 2022.</o>
+
+<p>K. Isaacs. <i>Like by Hand: Layout and Interactivity for Understanding
+Program Control Flow.</li> Univesity of Utah, Salt Lake City, Utah, USA.
+    April 7, 2022.</p>
+
+<p>K. Isaacs. <i>Like by Hand: Layout and Interactivity for Understanding
+Program Control Flow.</li> Univesity of Maryalnd, College Park, Maryland, USA.
+    February 15, 2022.</p>
+
+<p>K. Isaacs. <i>Like by Hand: Improving Visual Exploration of Control Flow
+through Computing-Specific Layout and Interactive Visual Analytics Design.</i>
+    CS Colloquium. Missouri University of Science and Technology, Rolla,
+    Missouri, USA. October 4, 2022.</p>
+
+<p>K. Isaacs. <i>Strategies for Visualizing Networks.</i> Invited Talk. Women
+    in Data Science - Tucson, Tucson, Arizona, USA. April 21, 2021.</p>
+
+<p>S. Devkota. <i>CcNav: Understanding the Compilation of Binary Code.</i>
+    Paper Presentation. IEEE VIS 2020, Salt Lake City, Utah, USA. October 28,
+    2020. <a href="https://www.youtube.com/watch?v=Y3yjiyfNf48">Youtube
+Link</a></p>
+
+<p>A. Bigelow. <i>Guidelines for Pursuing and Revealing Data Abstractions.</i>
+    Paper Presentation. IEEE VIS 2020, Salt Lake City, Utah, USA. October 29,
+    2020. <a href="https://youtu.be/LebtfJxfGGk?t=1451">Youtube Link</a></p>
+
+<p>S. Devkota. <i>Stress-Plux-X (SPX) Graph Layout.</i> Paper
+      Presentation. Graph Drawing '19, Prague, Czech Republic. September 18,
+      2019.</p>
+
+
+    <br /><br />
+    </div>
+   <div class="smalltext">
+    <i>Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.</i>
+   </div>
+   </div>
+  </body>
+</html>
