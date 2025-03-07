@@ -47,9 +47,11 @@
 
 <h3>Project Code</h3>
 <ul class="external">
-  <li><a href="http://github.com/hdc-arizona/roundtrip">Roundtrip</a></li>
-  <li><a href="http://github.com/devkotasabin/CFGConf">CFGConf</a></li>
+  <li><a href="https://www.piwheels.org/project/guidepost/">Guidepost</a></li>
   <li><a href="http://github.com/hdc-arizona/traveler">Traveler</a></li>
+  <li><a href="https://github.com/ml4ai/moviz-client">Overview+Detail Layout</a></li>
+  <li><a href="http://github.com/devkotasabin/CFGConf">CFGConf</a></li>
+  <li><a href="http://github.com/hdc-arizona/roundtrip">Roundtrip</a></li>
   <li><a href="http://github.com/hdc-arizona/cfgexplorer">CFGExplorer</a></li>
   <li><a href="http://github.com/LLNL/ravel">Ravel</a></li>
   <li><a href="http://github.com/kisaacs/graphterm">graphterm</a></li>
@@ -62,71 +64,65 @@
 
 <h3>About</h3>
 
-<p>I am an associate professor at the University of Utah in the School of Computing and <a href="https://www.sci.utah.edu/">SCI Institute</a>. I was previously an
+<p>I am an associate professor at the University of Utah in the Kahlert School of Computing and <a href="https://www.sci.utah.edu/">SCI Institute</a>. My research focuses on visualization challenges in complex exploratory analysis scenarios, such as those of active research teams. These challenges include representational and interactive scalability concerns for networks and timelines, integrating interactive visualizations in scripting workflows, and improving visualization methodologies. I have worked extensively in computing systems, developing methods of investigating behavior in high performance computing, distributed computing, data science, computer architecture, program analysis, optimization, and environmental planning. Supporting these goals, I also study how people conceptualize and communicate complex datasets. I was awarded an NSF CAREER grant (<a
+    href="gvss/">NSF
+    1844573</a>) in 2019, a DOE Early Career Research Program grant in
+  2021, and a Presidential Early Career Award for Sciences and Engineers (PECASE) in 2024.</p>
+
+<p>Prior to Utah, I was previously an
 assistant professor at the University of Arizona and a member of the <a
 href="https://hdc.cs.arizona.edu">Humans, Data, and Computers Lab</a> (HDC).
-    My interests are at the intersection of data visualization and computing
-systems. I develop new methods of representing complex computing processes for
-exploration and analysis of their behavior, with applications to high
-performance computing, distributed computing, data science, program analysis,
-    and optimization. I maintain a survey of such visualizations <a
-href="STAR">here</a>. I was awarded an NSF CAREER grant (<a
-    href="gvss/">NSF
-    1844573</a>) in 2019 and a DOE Early Career Research Program grant in
-    2021.</p> 
+</p> 
 
-<h3>Projects & Themes</h3>
+<h3>Recent Projects & Themes</h3>
+
 
 <div class="project">
-<h4>Improving Node-Link Diagrams for Graph Visualizations in Computing Systems </h4>
+<h4>Embedding Visualizations in Scripting Environments</h4>
  <div class="project-images">
- <a href="images/cfgconf.png"><img src="images/cfgconf-thumbnail.png" height=210 
-    alt="Image of a graph drawing produced by CFGConf. Loops are drawn with a canonical layout and highlighted with an orange background. The graph is filtered to show the sub-graph of interest, with nodes just outside the filter shown as small ellipses. Uninteresting functions are collapsed into a single node drawn with a dotted border." ></a>
+ <a href="images/atria-jupyter.png"><img src="images/atria-jupyter-thumbnail.png"
+    alt="Screenshot of Atria's Jupyter variant. A portion of a Jupyter notebook is shown with scripting cells, output, and a visualization cell. The visualization shows the expression tree (node-link diagram). In the corners are tooltips that show more information about teh selection. The visualization is done through the Roundtrip library."></a>
  </div>
 
  <div class="project-text">
 
-<p>Graphs are prevalent in computing systems. Control flow graphs describe
-paths through programs. Call graphs describe relations among functions. Task
-graphs describe ordering of work units. Dependency graphs describe
-relationships among libraries. Thus, people working in computing often have
-need to examine these graphs. However, general graph drawing approaches often
-cannot scale to the needs of these workers or when they do, provide a drawing
-that is difficult to interpret. We are developing approaches that identify and
-incorporate drawing conventions and layout algorithms to address these
-challenges. </p>
+<p>While some visual analyses are well-suited to stand-alone visualizaton
+systems, other visual analyses might be a relative small components of a
+larger endeavor. One example is a script-heavy analyses, such as those
+contained in Jupyter notebooks. We study needs in visualization for such
+workflows, how the environment may affect what we consider interaction, and
+how to design interactive visualizations that operate with these workflows.</p>
 
-<p>This work has been supported by the National Science Foundation
-through the <a
-href="https://hdc-arizona.github.io/projects/dependencies/">Dependencies
-Visualization</a> project (Grant No. <a
-    href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1656958">NSF
-    III-1656958</a>) and the <a href="gvss/">Systems Graph
-Visualization</a> project (Grant No. <a
-    href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1844573">NSF
-    III-1844573</a>) and by Lawrence Livermore National Laboratory through
-sub-contracts LLNS B639881 and B630670 .</p>
+<p>By careful design of the passing of analysis tasks and data between
+      visualizationa and scripting, we have developed <a
+	href="https://ieeexplore.ieee.org/document/10406216">methodologies</a>
+      for producing these visualizations, resulting in notebook-embedded tools
+      supporting analyses of job scheduling data (<a
+      href="https://www.piwheels.org/project/guidepost/">Guidepost</a>, with
+    the National Renewable Energy Laboratory), performance profiles (in <a
+      href="https://github.com/hatchet/hatchet">Hatchet</a> with LLNL and the
+    University of Maryland), and asynchronous multi-task runtimes (<a
+      href="https://arxiv.org/abs/1905.13135">Atria</a> with LSU and
+    University of Oregon). We produces a <a
+    href="https://github.com/hdc-arizona/roundtrip">library</a> (Roundtrip), for enabling
+	  these interactions in notebooks.</p>
 
-<p>CFGs:<br /> <a href="https://github.com/devkotasabin/CFGConf">CFGConf on Github</a> |  
-<a href="https://arxiv.org/abs/2009.00956">CCNav - VAST 2020</a> |  
-<a href="http://hdc.cs.arizona.edu/papers/cfgexplorer_preprint.pdf">CFGExplorer - EuroVis 2018</a> |  
-<a href="https://github.com/hdc-arizona/cfgexplorer">CFGExplorer on Github</a></p>
+<p>This research has been 
+supported by the Department of Energy (DOE Early Career Research Award), the National Renewable Energy Laboratory, and
+the Defense Technical Information Center.</p>
 
-<p>Graphs in ASCII:<br /> <a href="http://hdc.cs.arizona.edu/papers/tvcg_2018_graphterm_preprint.pdf">graphterm - TVCG 2019</a> |
-   <a href="papers/graphterm_supplemental.pdf">Survey of Graph Tools used by Github Projects</a></p>
+<p>
+<a href="https://www.piwheels.org/project/guidepost/">Guidepost on PiWheels</a> |
+<a href="https://ieeexplore.ieee.org/document/10406216">Design Methodology - TVCG '24</a> |
+<a href="https://github.com/hdc-arizona/roundtrip">Roundtrip library on Github</a> |
+   <a href="https://github.com/hatchet/hatchet">Hatchet visualization on Github</a> |
+    <a href="https://arxiv.org/abs/1905.13135">Atria - InfoVis '19 (ArXiv)</a></p>
 
-<p>General Graph Drawing:<br /> <a href="https://arxiv.org/abs/2005.04058">Alternate Data Abstractions - InfoVis 2020</a> |  
-<a href="https://alex-r-bigelow.github.io/wrangling-survey/Responses.html?viewIndex=0&filters=wpA">Alternate Data Abstractions Survey Data</a> | <br />
-<a href="https://arxiv.org/abs/1908.01769">Stress-Plus-X - Graph Drawing 2019</a> |  
-<a href="https://github.com/devkotasabin/stress-plus-x">Stress-Plus-X library</a></p>  
+  </div>
 
-    <p>NSF Project Websites:<br /><a href="gvss/">Systems Graph Visualization</a> |
-<a href="https://hdc-arizona.github.io/projects/dependencies/">Visualizing Dependencies</a></p>
-
-</div>
 
 <div class="project">
-<h4>Traveler - Node-to-Code Visualization for Performance Analysis</h4>
+<h4>Node-to-Code: Scalable and Interactive Visualization for Performance Analysis</h4>
  <div class="project-images">
  <a href="images/traveler.png"><img src="images/traveler-thumbnail.png"
     alt="Screenshot of the Traveler performance visualization platform. Five view tabs in a configurable view system are shown. These views include the source code (syntax highlight text), expression tree (node-link diagram), utilization overview (area chart), Gantt chart of events, and a histogram of task durations. Highlighting the histogram (yellow box) shows the location of those long duration tasks in the other views."></a>
@@ -142,9 +138,20 @@ exacerbated when multiple datasets are to be analyzed in tandem. Through work
 supported by the Department of Energy (DOE Early Career Research Award) and
 the Defense Technical Information Center, we are addressing these challenges
 to bring scalable, interactive, and interoperable visualizations for
-performance analysis.</p>
+performance analysis. Our outcomes include <a
+href="https://github.com/hdc-arizona/traveler-integrated">Traveler</a>, a
+visualization platform for execution traces, and <a
+						     href="https://www.piwheels.org/project/guidepost/">Guidepost</a>,
+						   a visualization of job
+						   queue data. We also contributed to <a href="https://kisaacs.github.io/papers/brink_thicket_hpdc2023.pdf">Thicket</a>, a data science library for analyzing performance ensembles</p>
 
-<p><a href="https://github.com/hdc-arizona/traveler-integrated">Traveler on Github</a> |
+<p>
+<a href="https://www.piwheels.org/project/guidepost/">Guidepost on PiWheels</a> |
+<a href="https://arxiv.org/abs/2408.04050">Gantt Taxonomy - IEEE VIS 2024</a> |
+<a href="https://arxiv.org/abs/2107.00065">Scalable Gantt Designs - VISSOFT 2024</a> |
+<a href="https://kisaacs.github.io/papers/brink_thicket_hpdc2023.pdf">Thicket - HPDC '23</a> |
+<a href="https://arxiv.org/abs/2208.00109">Traveler - IEEE VIS '22 (ArXiv)</a> |
+<a href="https://github.com/hdc-arizona/traveler-integrated">Traveler on Github</a> |
     <a href="https://arxiv.org/abs/1905.13135">Atria - InfoVis '19 (ArXiv)</a></p>
 
 <p class="aux">As part of this effort, in collaboration with the <a
@@ -162,38 +169,66 @@ distributed array toolkit targetting several data science applications.  </p>
   </div>
 
 <div class="project">
-<h4>Interaction in Visualization in Jupyter Notebooks</h4>
+<h4>Improving Node-Link Diagrams for Network Visualizations in Computing Systems </h4>
  <div class="project-images">
- <a href="images/atria-jupyter.png"><img src="images/atria-jupyter-thumbnail.png"
-    alt="Screenshot of Atria's Jupyter variant. A portion of a Jupyter notebook is shown with scripting cells, output, and a visualization cell. The visualization shows the expression tree (node-link diagram). In the corners are tooltips that show more information about teh selection. The visualization is done through the Roundtrip library."></a>
+ <a href="images/cfgconf.png"><img src="images/cfgconf-thumbnail.png" height=210 
+    alt="Image of a graph drawing produced by CFGConf. Loops are drawn with a canonical layout and highlighted with an orange background. The graph is filtered to show the sub-graph of interest, with nodes just outside the filter shown as small ellipses. Uninteresting functions are collapsed into a single node drawn with a dotted border." ></a>
  </div>
 
  <div class="project-text">
 
-<p>While some visual analyses are well-suited to stand-alone visualizaton
-systems, other visual analyses might be a relative small components of a
-larger endeavor. One example is a script-heavy analyses, such as those
-contained in Jupyter notebooks. We are exploring needs in visualization for
-such workflows and how the environment may affect what we consider
-interaction. To this end, we produced <a
-href="https://github.com/hdc-arizona/roundtrip">Roundtrip</a>, a library for
-integrating Javascript visualization in Jupyter notebooks and passing data
-between those JS visualization and Python scripting cells. Roundtrip has been
-used for this purpose in the <a
-href="https://github.com/hatchet/hatchet">Hatchet</a> performance analysis
-library as well as in a variant of <a
-href="https://arxiv.org/abs/1905.13135">Atria</a> and has been 
-supported by the Department of Energy (DOE Early Career Research Award) and
-the Defense Technical Information Center.</p>
+<p>Graphs are prevalent in computing systems. Control flow graphs describe
+paths through programs. Call graphs describe relations among functions. Task
+graphs describe ordering of work units. Dependency graphs describe
+relationships among libraries. Thus, people working in computing often have
+need to examine these graphs. However, general graph drawing approaches often
+cannot scale to the needs of these workers or when they do, provide a drawing
+that is difficult to interpret. We are developing approaches that identify and
+incorporate drawing conventions and layout algorithms to address these
+challenges. </p>
 
-<p><a href="https://github.com/hdc-arizona/roundtrip">Roundtrip on Github</a> |
-   <a href="https://github.com/hatchet/hatchet">Hatchet on Github</a> |
-    <a href="https://arxiv.org/abs/1905.13135">Atria - InfoVis '19 (ArXiv)</a></p>
+<p>We have developed new layouts to support different forms of network
+visualization as well as new domain-specific interfaces for specifying them,
+thereby enabling people to access visualizations suiting their needs.</p> 
 
-  </div>
+
+<p>This work has been supported by the National Science Foundation
+through the <a
+href="https://hdc-arizona.github.io/projects/dependencies/">Dependencies
+Visualization</a> project (Grant No. <a
+    href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1656958">NSF
+    III-1656958</a>) and the <a href="gvss/">Systems Graph
+Visualization</a> project (Grant No. <a
+    href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1844573">NSF
+    III-1844573</a>) and by Lawrence Livermore National Laboratory through
+sub-contracts LLNS B639881 and B630670.</p>
+
+<p>General Graph Drawing:<br /> 
+<a href="https://arxiv.org/abs/2408.04045">Overview + Detail Layout - IEEE VIS 2024</a> |
+<a href="https://arxiv.org/abs/2005.04058">Alternate Data Abstractions - InfoVis 2020</a> |  
+<a href="https://alex-r-bigelow.github.io/wrangling-survey/Responses.html?viewIndex=0&filters=wpA">Alternate Data Abstractions Survey Data</a> | <br />
+<a href="https://arxiv.org/abs/1908.01769">Stress-Plus-X - Graph Drawing 2019</a> |  
+<a href="https://github.com/devkotasabin/stress-plus-x">Stress-Plus-X library</a></p>  
+
+<p>CFGs:<br /> 
+<a href="https://arxiv.org/abs/2108.03047">CFGConf - VISSOFT 2022</a> |
+<a href="https://github.com/devkotasabin/CFGConf">CFGConf on Github</a> |  
+<a href="https://arxiv.org/abs/2009.00956">CCNav - VAST 2020</a> |  
+<a href="http://hdc.cs.arizona.edu/papers/cfgexplorer_preprint.pdf">CFGExplorer - EuroVis 2018</a> |  
+<a href="https://github.com/hdc-arizona/cfgexplorer">CFGExplorer on Github</a></p>
+
+<p>Graphs in ASCII:<br /> <a href="http://hdc.cs.arizona.edu/papers/tvcg_2018_graphterm_preprint.pdf">graphterm - TVCG 2019</a> |
+   <a href="papers/graphterm_supplemental.pdf">Survey of Graph Tools used by Github Projects</a></p>
+
+    <p>NSF Project Websites:<br /><a href="gvss/">Systems Graph Visualization</a> |
+<a href="https://hdc-arizona.github.io/projects/dependencies/">Visualizing Dependencies</a></p>
+
+</div>
+
+
 
 <div class="project">
-<h4>Understanding How People Think About Data</h4>
+<h4>Understanding How People Think About Data for Visualization and Interface Design</h4>
  <div class="project-images">
  <a href="images/latent.png"><img src="images/latent-thumbnail.png"
     alt="Diagram of data typology used in the Latent Data Abstractions study. It is a fully connected node-link diagram showing how Tabular, Media, Spatial/Temporal, Network/Hierarchy, Textual, and Grouped data all flow between each other as an abstraction."></a>
@@ -203,20 +238,78 @@ the Defense Technical Information Center.</p>
 
 <p>A key part in any visualization project is understanding the data to be
 visualized. There are several factors regarding data, including the format,
-    ranges, meaning, and form. We seek to understand how people conceptuatlize
-their data and how we, as visualization designers and researchers, can improve
-our processes of data and workflow discovery. We conducted a study to delve
-deeper into questions about how people think and cast their data. We identify
-and define <i>latent data abstractions—data abstractions</i> which are useful
-and meaningful, but not yet fully gestated. We report on our observations and
-produce guidance for further data discovery.</p>
+ranges, meaning, and form. We seek to understand how people conceptuatlize
+their data and use this knowledge to understand how we, as visualization
+designers and researchers, can improve our processes of data and workflow
+discovery and ultimately design better visualizations and interfaces for
+people. We conducted a study to delve deeper into questions about how people
+think and cast their data. We identify and define <i><a
+							 href="https://arxiv.org/abs/2005.04058">latent
+							 data
+						     abstractions—data
+						     abstractions</a></i>
+						 which are useful and
+						 meaningful, but not yet fully
+						 gestated. We report on our
+						 observations and produce
+						 guidance for further data
+						 discovery.</p>
 
 
-<p><a href="https://arxiv.org/abs/2005.04058">Latent Data Abstractions - InfoVis 2020</a> |  
+<p>
+<a href="https://dl.acm.org/doi/fullHtml/10.1145/3544548.3580669">Data Abstraction Elephants - ACM CHI 2023</a> |
+<a href="https://arxiv.org/abs/2005.04058">Latent Data Abstractions - InfoVis 2020</a> |  
 <a href="https://alex-r-bigelow.github.io/wrangling-survey/Responses.html?viewIndex=0&filters=wpA">Latent Data Abstractions Survey Data</a></p>
 
   </div>
 </div>
+
+
+<div class="project">
+<h4>Look Over Here - Gestures and Visualization</h4>
+<!-- <div class="project-images">
+ <a href="images/latent.png"><img src="images/latent-thumbnail.png"
+    alt="Diagram of data typology used in the Latent Data Abstractions study. It is a fully connected node-link diagram showing how Tabular, Media, Spatial/Temporal, Network/Hierarchy, Textual, and Grouped data all flow between each other as an abstraction."></a>
+</div> -->
+
+ <div class="project-text">
+
+<p>Pointing gestures are frequent when people talk about and present data visualizations. We study how gestures around visualizations occur in online meetings. Through a series of studies, we develop a preliminary taxonomy of online gestures and their meanings. We also develop a system that captures these gestures and associates them with verbal utterances to create annotated and interactive transcripts of their meetings that replay the gestures on the visualizations. Our tool offers and quick and lightweight way to review these data discussions without needing to replay video.
+</p>
+
+
+<p>
+<a href="https://arxiv.org/abs/2408.04041">Associating Gestures and Utterances in Online Meetings - IEEE VIS 2024</a>
+</p>
+
+  </div>
+</div>
+
+
+<div class="project">
+<h4>Human-Centered Computer Architecture - Interfaces and Visualization for Chip Design</h4>
+<!-- <div class="project-images">
+ <a href="images/latent.png"><img src="images/latent-thumbnail.png"
+    alt="Diagram of data typology used in the Latent Data Abstractions study. It is a fully connected node-link diagram showing how Tabular, Media, Spatial/Temporal, Network/Hierarchy, Textual, and Grouped data all flow between each other as an abstraction."></a>
+</div> -->
+
+ <div class="project-text">
+
+   <p>Research in computer architecture drives the development of new and more powerful computing hardware. New hardware designs must be simulated, generating vast amount of data that can be difficult to analyze. Furthermore, the simulations themselves can be a bottleneck or barrier to research as they require strong technical skills to run and manage. Funded by the National Science Foundation, this project considers interfaces and visualizations to address the needs of computer architects.</p> 
+
+
+<p>
+Interfaces for Monitoring Chip Simulations - MICRO-57 |
+<a href="https://kisaacs.github.io/papers/sun_vis4mesh_tvcg2024.pdf">Network-on-Chip Visualizations - TVCG 2024</a>
+</p>
+
+  </div>
+</div>
+
+
+
+<h3>Past Projects & Themes</h3>
+
 
 <div class="project">
 <h4>Integrating Citizen Science, Environmental, and Socio-Economic Data</h4>
@@ -243,9 +336,6 @@ download facets of the data.  </p>
 <a href="https://www.frontiersin.org/articles/10.3389/fsufs.2021.620470/full">Data Integration - Frontiers</a>
 </p>
     </div>
-
-
-<h3>Past Projects & Themes</h3>
 
 <div class="project">
 <h4>Understanding the Space of Infographics</h4>
