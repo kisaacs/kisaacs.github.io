@@ -77,48 +77,6 @@ href="https://hdc.cs.arizona.edu">Humans, Data, and Computers Lab</a> (HDC).
 <h3>Recent Projects & Themes</h3>
 
 
-<div class="project">
-<h4>Embedding Visualizations in Scripting Environments</h4>
- <div class="project-images">
- <a href="images/atria-jupyter.png"><img src="images/atria-jupyter-thumbnail.png"
-    alt="Screenshot of Atria's Jupyter variant. A portion of a Jupyter notebook is shown with scripting cells, output, and a visualization cell. The visualization shows the expression tree (node-link diagram). In the corners are tooltips that show more information about teh selection. The visualization is done through the Roundtrip library."></a>
- </div>
-
- <div class="project-text">
-
-<p>While some visual analyses are well-suited to stand-alone visualizaton
-systems, other visual analyses might be a relative small components of a
-larger endeavor. One example is a script-heavy analyses, such as those
-contained in Jupyter notebooks. We study needs in visualization for such
-workflows, how the environment may affect what we consider interaction, and
-how to design interactive visualizations that operate with these workflows.</p>
-
-<p>By careful design of the passing of analysis tasks and data between
-      visualizationa and scripting, we have developed <a
-	href="https://ieeexplore.ieee.org/document/10406216">methodologies</a>
-      for producing these visualizations, resulting in notebook-embedded tools
-      supporting analyses of job scheduling data (<a
-      href="https://pypi.org/project/guidepost/">Guidepost</a>, with
-    the National Renewable Energy Laboratory), performance profiles (in <a
-      href="https://github.com/hatchet/hatchet">Hatchet</a> with LLNL and the
-    University of Maryland), and asynchronous multi-task runtimes (<a
-      href="https://arxiv.org/abs/1905.13135">Atria</a> with LSU and
-    University of Oregon). We produced a <a
-    href="https://github.com/hdc-arizona/roundtrip">library</a> (Roundtrip), for enabling
-	  these interactions in notebooks.</p>
-
-<p>This research has been 
-supported by the Department of Energy (DOE Early Career Research Award), the National Renewable Energy Laboratory, and
-the Defense Technical Information Center.</p>
-
-<p>
-<a href="https://pypi.org/project/guidepost/">Guidepost on PyPI</a> |
-<a href="https://ieeexplore.ieee.org/document/10406216">Design Methodology - TVCG '24</a> |
-<a href="https://github.com/hdc-arizona/roundtrip">Roundtrip library on Github</a> |
-   <a href="https://github.com/hatchet/hatchet">Hatchet visualization on Github</a> |
-    <a href="https://arxiv.org/abs/1905.13135">Atria - InfoVis '19 (ArXiv)</a></p>
-
-  </div>
 
 
 <div class="project">
@@ -139,13 +97,22 @@ supported by the Department of Energy (DOE Early Career Research Award) and
 the Defense Technical Information Center, we are addressing these challenges
 to bring scalable, interactive, and interoperable visualizations for
 performance analysis. Our outcomes include <a
-href="https://github.com/hdc-arizona/traveler-integrated">Traveler</a>, a
-visualization platform for execution traces, and <a
-						     href="https://pypi.org/project/guidepost/">Guidepost</a>,
-						   a visualization of job
-						   queue data. We also contributed to <a href="https://kisaacs.github.io/papers/brink_thicket_hpdc2023.pdf">Thicket</a>, a data science library for analyzing performance ensembles</p>
+					       href="https://github.com/hdc-arizona/traveler-integrated">Traveler</a>,
+					     a visualization platform for
+					       execution traces, <a
+						 href="https://arxiv.org/abs/2508.03974">ESeMan</a>,
+					       a data management system for
+					       fast drawing of Gantt charts
+					       and event timelines, and <a
+					       href="https://pypi.org/project/guidepost/">Guidepost</a>,
+					     a visualization of job queue
+					     data. We also contributed to <a
+					     href="https://kisaacs.github.io/papers/brink_thicket_hpdc2023.pdf">Thicket</a>,
+					   a data science library for
+					   analyzing performance ensembles</p>
 
 <p>
+<a href="https://arxiv.org/abs/2508.03974">ESeMan - LDAV 2025</a> |
 <a href="https://pypi.org/project/guidepost/">Guidepost on PyPI</a> |
 <a href="https://arxiv.org/abs/2408.04050">Gantt Taxonomy - IEEE VIS 2024</a> |
 <a href="https://arxiv.org/abs/2107.00065">Scalable Gantt Designs - VISSOFT 2024</a> |
@@ -166,6 +133,52 @@ distributed array toolkit targetting several data science applications.  </p>
 <p><a href="https://dl.acm.org/doi/abs/10.1145/3311790.3396657">Jetlag - PEARC '20</a></p>
 
 <p>See also: <a href="http://stellar.cct.lsu.edu/projects/hpx/">HPX Website</a></p>
+  </div>
+
+  <div class="project">
+<h4>Embedding Visualizations in Scripting Environments -- Notebooks & Command Lines</h4>
+ <div class="project-images">
+ <a href="images/atria-jupyter.png"><img src="images/atria-jupyter-thumbnail.png"
+    alt="Screenshot of Atria's Jupyter variant. A portion of a Jupyter notebook is shown with scripting cells, output, and a visualization cell. The visualization shows the expression tree (node-link diagram). In the corners are tooltips that show more information about teh selection. The visualization is done through the Roundtrip library."></a>
+ </div>
+
+ <div class="project-text">
+
+<p>While some visual analyses are well-suited to stand-alone visualizaton
+systems, other visual analyses might be a relative small components of a
+larger endeavor. One example is a script-heavy analyses, such as those
+contained in Jupyter notebooks or those conducted at command line interfaces.
+We study needs in visualization for such workflows, how the environment may
+affect what we consider interaction, and how to design interactive
+visualizations that operate with these workflows.</p>
+
+<p>By careful design of the passing of analysis tasks and data between
+      visualizationa and scripting, we have developed <a
+	href="https://ieeexplore.ieee.org/document/10406216">methodologies</a>
+      for producing these visualizations, resulting in notebook-embedded tools
+      supporting analyses of job scheduling data (<a
+      href="https://pypi.org/project/guidepost/">Guidepost</a>, with
+    the National Renewable Energy Laboratory), performance profiles (in <a
+      href="https://github.com/hatchet/hatchet">Hatchet</a> with LLNL and the
+    University of Maryland), and asynchronous multi-task runtimes (<a
+      href="https://arxiv.org/abs/1905.13135">Atria</a> with LSU and
+    University of Oregon). We produced a <a
+    href="https://github.com/hdc-arizona/roundtrip">library</a> (Roundtrip), for enabling
+  these interactions in notebooks, and <a href="http://hdc.cs.arizona.edu/papers/tvcg_2018_graphterm_preprint.pdf">graphterm</a>, an ASCII-based interactive network visualizer for use in command line workflows.</p>
+
+<p>This research has been 
+supported by the Department of Energy (DOE Early Career Research Award), the National Renewable Energy Laboratory, and
+the Defense Technical Information Center.</p>
+
+<p>
+<a href="https://pypi.org/project/guidepost/">Guidepost on PyPI</a> |
+<a href="https://ieeexplore.ieee.org/document/10406216">Design Methodology - TVCG '24</a> |
+<a href="https://github.com/hdc-arizona/roundtrip">Roundtrip library on Github</a> |
+   <a href="https://github.com/hatchet/hatchet">Hatchet visualization on Github</a> |
+    <a href="https://arxiv.org/abs/1905.13135">Atria - InfoVis '19 (ArXiv)</a></p> |
+    <a href="https://github.com/kisaacs/graphterm">graphterm on Github</a></p> |
+    <a href="http://hdc.cs.arizona.edu/papers/tvcg_2018_graphterm_preprint.pdf">graphterm - TVCG '19</a></p> |
+
   </div>
 
 <div class="project">
@@ -210,7 +223,8 @@ sub-contracts LLNS B639881 and B630670.</p>
 <a href="https://arxiv.org/abs/1908.01769">Stress-Plus-X - Graph Drawing 2019</a> |  
 <a href="https://github.com/devkotasabin/stress-plus-x">Stress-Plus-X library</a></p>  
 
-<p>CFGs:<br /> 
+<p>CFGs:<br />
+<a href="https://arxiv.org/abs/2510.18311">DisViz - TVCG '26</a> |
 <a href="https://arxiv.org/abs/2108.03047">CFGConf - VISSOFT 2022</a> |
 <a href="https://github.com/devkotasabin/CFGConf">CFGConf on Github</a> |  
 <a href="https://arxiv.org/abs/2009.00956">CCNav - VAST 2020</a> |  
@@ -223,45 +237,6 @@ sub-contracts LLNS B639881 and B630670.</p>
     <p>NSF Project Websites:<br /><a href="gvss/">Systems Graph Visualization</a> |
 <a href="https://hdc-arizona.github.io/projects/dependencies/">Visualizing Dependencies</a></p>
 
-</div>
-
-
-
-<div class="project">
-<h4>Understanding How People Think About Data for Visualization and Interface Design</h4>
- <div class="project-images">
- <a href="images/latent.png"><img src="images/latent-thumbnail.png"
-    alt="Diagram of data typology used in the Latent Data Abstractions study. It is a fully connected node-link diagram showing how Tabular, Media, Spatial/Temporal, Network/Hierarchy, Textual, and Grouped data all flow between each other as an abstraction."></a>
- </div>
-
- <div class="project-text">
-
-<p>A key part in any visualization project is understanding the data to be
-visualized. There are several factors regarding data, including the format,
-ranges, meaning, and form. We seek to understand how people conceptuatlize
-their data and use this knowledge to understand how we, as visualization
-designers and researchers, can improve our processes of data and workflow
-discovery and ultimately design better visualizations and interfaces for
-people. We conducted a study to delve deeper into questions about how people
-think and cast their data. We identify and define <i><a
-							 href="https://arxiv.org/abs/2005.04058">latent
-							 data
-						     abstractions—data
-						     abstractions</a></i>
-						 which are useful and
-						 meaningful, but not yet fully
-						 gestated. We report on our
-						 observations and produce
-						 guidance for further data
-						 discovery.</p>
-
-
-<p>
-<a href="https://dl.acm.org/doi/fullHtml/10.1145/3544548.3580669">Data Abstraction Elephants - ACM CHI 2023</a> |
-<a href="https://arxiv.org/abs/2005.04058">Latent Data Abstractions - InfoVis 2020</a> |  
-<a href="https://alex-r-bigelow.github.io/wrangling-survey/Responses.html?viewIndex=0&filters=wpA">Latent Data Abstractions Survey Data</a></p>
-
-  </div>
 </div>
 
 
@@ -305,6 +280,47 @@ think and cast their data. We identify and define <i><a
 
   </div>
 </div>
+
+
+
+
+<div class="project">
+<h4>Understanding How People Think About Data for Visualization and Interface Design</h4>
+ <div class="project-images">
+ <a href="images/latent.png"><img src="images/latent-thumbnail.png"
+    alt="Diagram of data typology used in the Latent Data Abstractions study. It is a fully connected node-link diagram showing how Tabular, Media, Spatial/Temporal, Network/Hierarchy, Textual, and Grouped data all flow between each other as an abstraction."></a>
+ </div>
+
+ <div class="project-text">
+
+<p>A key part in any visualization project is understanding the data to be
+visualized. There are several factors regarding data, including the format,
+ranges, meaning, and form. We seek to understand how people conceptuatlize
+their data and use this knowledge to understand how we, as visualization
+designers and researchers, can improve our processes of data and workflow
+discovery and ultimately design better visualizations and interfaces for
+people. We conducted a study to delve deeper into questions about how people
+think and cast their data. We identify and define <i><a
+							 href="https://arxiv.org/abs/2005.04058">latent
+							 data
+							 abstractions</a></i>—data
+						     abstractions
+						 which are useful and
+						 meaningful, but not yet fully
+						 gestated. We report on our
+						 observations and produce
+						 guidance for further data
+						 discovery.</p>
+
+
+<p>
+<a href="https://dl.acm.org/doi/fullHtml/10.1145/3544548.3580669">Data Abstraction Elephants - ACM CHI 2023</a> |
+<a href="https://arxiv.org/abs/2005.04058">Latent Data Abstractions - InfoVis 2020</a> |  
+<a href="https://alex-r-bigelow.github.io/wrangling-survey/Responses.html?viewIndex=0&filters=wpA">Latent Data Abstractions Survey Data</a></p>
+
+  </div>
+</div>
+
 
 
 <div class="project">
